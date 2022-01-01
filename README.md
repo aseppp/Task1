@@ -25,7 +25,7 @@ https://asepsaepudin-project.netlify.app/
 
 # Fitur
 1. Menggunakan Flexbox untuk Layouting 
-2. Menggunakan Fmport Font dari Google Font 
+2. Menggunakan Import Font dari Google Font 
 3. Menggunakan Table Experience
 4. Minimalis Design 
 5. Hover Effect on social media and button
