@@ -135,7 +135,30 @@ button {
   margin-right: 1rem;
 }
 
-#skill {
+#html,
+#css {
   width: fit-content;
   margin: 5px;
+}
+
+@media screen and (max-width: 412px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 5px;
+    box-shadow: 0px 0px 20px black;
+  }
+
+  .navContainer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
