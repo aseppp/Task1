@@ -28,10 +28,11 @@ https://asepsaepudin-project.netlify.app/
 2. Menggunakan Fmport Font dari Google Font 
 3. Menggunakan Table Experience
 4. Minimalis Design 
-5. Functional Validation Contac Form
-6. Functional Checkbox
-7. Submit Button linking ke Email dan Mengambil Data dari Value Input Element HTML
-8. Responsive Design max width 400px Device
+5. Hover Effect on social media and button
+6. Functional Validation Contac Form
+7. Functional Checkbox
+8. Submit Button linking ke Email dan Mengambil Data dari Value Input Element HTML
+9. Responsive Design max width 400px Device
 
 
 # Kritik dan saran 
