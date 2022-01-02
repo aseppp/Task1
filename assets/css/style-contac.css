@@ -72,6 +72,12 @@ button a {
 
 /* MAIN */
 
+main {
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .contacForm {
   margin: auto;
   width: 350px;

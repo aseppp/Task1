@@ -77,9 +77,11 @@ button a {
 /* MAIN */
 main {
   width: 1136px;
-  margin: 5px auto;
+  height: 89vh;
+  margin: auto;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 section.main {
@@ -173,6 +175,7 @@ i:hover {
     margin: 5px auto;
     display: flex;
     align-items: flex-end;
+    height: auto;
   }
 
   section.main {

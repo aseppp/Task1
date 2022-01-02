@@ -41,11 +41,11 @@ function submitData() {
 
 
     // Kondisi untuk check form sudah terisi semua atau belum
-    if (nameUser === "" || email === "" || phone == "" || chose === "" || message === "") {
+    if (nameUser === "" && email === "" && phone === "" && chose === "" && message === "") {
         return alert("Anda harus melengkapi data ini!")
     }
 
     let a = document.createElement('a');
-    a.href = `mailto: ${emailOwner}?subject=${chose}&body=Halo nama saya ${nameUser}, pesan saya ${message}, skill yang dibutuhkan ${html} ${css}, Hubungi saya ${phone}`;
+    a.href = `mailto: ${emailOwner}?subject=${chose}&body=Halo nama saya, ${nameUser}, pesan saya ${message}, skill yang dibutuhkan ${html} ${css}`;
     a.click()
 }
