@@ -47,5 +47,7 @@ function submitData() {
 
     let a = document.createElement('a');
     a.href = `mailto: ${emailOwner}?subject=${chose}&body=Halo nama saya, ${nameUser}, pesan saya ${message}, skill yang dibutuhkan ${html} ${css}`;
+    // <a href="mailto:asep@mail.com?subject=Test Subject &body=Test pesan">Send mail</a>\
+    // a.href = `mailto:${emailOwner}?subject=${chose}&body=Halo nama saya ${nameUser}, pesan ${message}, call ${phone}`;
     a.click()
 }

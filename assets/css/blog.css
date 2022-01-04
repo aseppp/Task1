@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1d1d1d;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 1rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-image: url(/assets/image/grains-background.png);
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 5px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.navContainer {
+  width: 1136px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navLogo img {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navCta button {
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #43ff88;
+}
+
+button a {
+  color: black;
+}
+
+/* CREATE POST STYLE */
+.createPost {
+  width: 350px;
+  margin: 1.5rem auto;
+}
+
+.headingCreate {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.input-image {
+  padding: 0;
+  margin: 1rem 0;
+  border-radius: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.createInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin: 10px 0;
+}
+
+.post-button button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #43ff88;
+  cursor: pointer;
+}
+
+/* MAIN STYLE BLOG LIST */
+.container {
+  width: 1000px;
+  margin: 1rem auto;
+}
+
+.blogItem {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.blogImage img {
+  display: flex;
+  width: 300px;
+}
+
+.blogContent {
+  width: 100%;
+  padding: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.buttonGroup button {
+  margin: 5px;
+}
+
+#btn-edit,
+#btn-post {
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.detailContent {
+  font-size: 1.7rem;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 412px) {
+  nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 5px;
+    box-shadow: 0px 0px 20px black;
+  }
+
+  .navContainer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .blogItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .blogImage img {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+  }
+}
