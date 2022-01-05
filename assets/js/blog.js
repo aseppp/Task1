@@ -20,12 +20,12 @@ function submitPost(event) {
     let objectBlog = {
         title: title,
         content: content,
-        image: image
+        image: image,
+        author: "Asep Saepudin",
+        postAt: new Date()
     }
 
     blogs.push(objectBlog)
-
-    console.log(blogs);
 
 
     //Berfungsi untuk memanggil function dibawah
@@ -55,13 +55,75 @@ function renderBlog() {
             <a href="#" class="detailContent" target="_blank" style="color: #43ff88;">${blogs[i].title}</a>
 
             <div class="detailDateTime" style="color: grey;">
-                12 Jul 2021 22:30 WIB | Asep Saepudin
+                ${getTime(blogs[i].postAt)} | ${blogs[i].author}
             </div>
 
             <div class="detailDesc">
                 <p class="desc">${blogs[i].content}</p>
             </div>
+            <div class="distanceTime" style="text-align: end; color: #303030;">
+            <span> ${getDistanceTime(blogs[i].postAt)}</span>
+        </div>
         </div>
     </div>`
     }
+}
+
+
+let month = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Des']
+
+function getTime(time) {
+
+
+    let date = time.getDate()
+    let monthIndex = time.getMonth()
+    let year = time.getFullYear()
+
+    let hours = time.getHours()
+    let minutes = time.getMinutes()
+
+    let fullTime = `${date} ${month[monthIndex] } ${year} ${hours}:${minutes} WIB`
+
+    return fullTime;
+}
+
+
+
+function getDistanceTime(time) {
+
+
+    let timeNow = new Date();
+    let timePost = time;
+
+
+    let distance = timeNow - timePost;
+
+    let milisecond = 1000
+    let secondInHours = 3600
+    let hoursInDay = 23
+    let second = 60
+    let minutes = 60
+
+
+    let distanceDay = Math.floor(distance / (milisecond *secondInHours *hoursInDay))
+    let distanceHours = Math.floor(distance / (milisecond *second *minutes))
+    let distanceMinutes = Math.floor(distance / (milisecond * second))
+    let distanceSecond = Math.floor(distance / milisecond)
+
+
+    distanceDay = Math.floor(distanceDay);
+
+    if(distanceDay >= 1){
+        console.log(`${distanceDay} day ago`);
+      } else {
+        if (distanceHours >= 1){
+        return(`${distanceHours} hours ago`);
+        } else {
+          if (distanceMinutes >= 1) {
+            return(`${distanceMinutes} minutes ago`);
+          } else {
+              return(`${distanceSecond} second ago`);
+          }
+        }
+      }
 }

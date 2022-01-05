@@ -149,7 +149,7 @@ i:hover {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 412px) {
   * {
     margin: 0;
     padding: 0;
