@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,4 +89,96 @@
     </main>
     <script src="./assets/js/form.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style-contac.css">
+    <title>Contacs</title>
+</head>
+<body>
+
+     <!-- NAVBAR -->
+     <nav class="navbar">
+        <div class="navContainer">
+            <div class="navLeft">
+                <div class="navLogo">
+                    <img src="./assets/image/profile.jpg" alt="profile">
+                </div>
+
+                <div class="navMenu">
+                    <ul>
+                        <li class="navLinks">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="navLinks">
+                            <a href="./blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navCta">
+                <button class="contac"><a href="./contac.html">Contac Me</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="contacForm">
+            <h3 style="text-align: center; margin-bottom: 1.5rem;">From Validasi Email</h3>
+            <form class="form">
+                <div class="box">
+                    <label class="name" for="name">Name</label>
+                    <input id="input-name" type="text" placeholder="Type your name">
+                </div>
+                <div class="box">
+                    <label class="email" for="name">Email</label>
+                    <input id="input-email" type="email" placeholder="Type your email">
+                </div>
+                <div class="box">
+                    <label class="phone" for="name">Phone Number</label>
+                    <input id="input-phone" type="text" placeholder="Type your phone number">
+                </div>
+
+                <div class="box">
+                    <label for="subject">Subject</label>
+                    <select name="Subject" id="input-subject" >
+                        <option value="">Please Select Option</option>
+                        <option value="Privacy Police">Privacy Police</option>
+                        <option value="Problem With Our Site">Problem With Our Site</option>
+                        <option value="Question On Order">Question on Order</option>
+                        <option value="Other Question">Other Question</option>
+                    </select>
+                </div>
+                <div class="skillBox">
+                    <label for="list-skill">Skills</label><br>
+
+
+                    <label for="skills">
+                        <input type="checkbox" class="skillsHtml" id="html" value="HTML">HTML
+                    </label>
+
+
+                    <label for="skills">
+                        <input type="checkbox"  id="css" value="CSS">CSS
+                    </label>
+                </div>
+                <div class="box">
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="input-message" cols="8" rows="4" placeholder="Type here ..."></textarea>
+                </div>
+
+                <button id="submitBtn" type="button" onclick="submitData()">Submit</button>
+                <!-- <a href="mailto:asep@mail.com?subject=Test Subject &body=Test pesan">Send mail</a> -->
+            </form>
+        </div>
+    </main>
+    <script src="./assets/js/form.js"></script>
+</body>
+>>>>>>> 4ca07d6 (Final Project Blog and Portofolio)
 </html>

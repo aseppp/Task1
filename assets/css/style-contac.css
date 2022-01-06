@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 * {
@@ -168,3 +169,175 @@ button {
     justify-content: space-between;
   }
 }
+=======
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1d1d1d;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 1rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-image: url(/assets/image/grains-background.png);
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 5px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.navContainer {
+  width: 1136px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navLogo img {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navCta button {
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #43ff88;
+}
+
+button a {
+  color: black;
+}
+
+/* MAIN */
+
+main {
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contacForm {
+  margin: auto;
+  width: 350px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.967rem;
+}
+
+label {
+  margin-bottom: 2px;
+  margin-right: 1rem;
+}
+
+input {
+  width: 350px;
+  padding: 12px;
+  background-color: gray;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+
+::placeholder {
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+select {
+  background-color: gray;
+  padding: 12px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  background-color: gray;
+  border-radius: 7px;
+  padding: 1rem;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  background-color: #43ff88;
+  color: #303030;
+  font-family: "Poppins", sans-serif;
+}
+
+.boxSkill {
+  margin-bottom: 14px;
+  margin-right: 1rem;
+}
+
+#html,
+#css {
+  width: fit-content;
+  margin: 5px;
+}
+
+@media screen and (max-width: 412px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 5px;
+    box-shadow: 0px 0px 20px black;
+  }
+
+  .navContainer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+>>>>>>> 4ca07d6 (Final Project Blog and Portofolio)
