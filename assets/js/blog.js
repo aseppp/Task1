@@ -36,7 +36,7 @@ function submitPost(event) {
 function renderBlog() {
     let containerBlog = document.getElementById('containerBlog');
 
-    containerBlog.innerHTML = firstPost();
+    containerBlog.innerHTML = firstPost()
 
 
     //Looping untuk blog post list
