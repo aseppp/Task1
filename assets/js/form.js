@@ -41,13 +41,21 @@ function submitData() {
 
 
     // Kondisi untuk check form sudah terisi semua atau belum
-    if (nameUser === "" && email === "" && phone === "" && chose === "" && message === "") {
-        return alert("Anda harus melengkapi data ini!")
+    if (nameUser === "") {
+        alert("Anda harus mengisi nama")
+    } else if (email === ""){
+        alert("Anda harus mengisi email")
+    } else if (phone === "") {
+        alert("Anda harus mengisi nomor telepon")
+    } else if (chose === "") {
+        alert("Anda harus mengisi subject")
+    } else if (message === "") {
+        alert("Anda harus memberikan pesan")
     }
+
+
 
     let a = document.createElement('a');
     a.href = `mailto: ${emailOwner}?subject=${chose}&body=Halo nama saya, ${nameUser}, pesan saya ${message}, skill yang dibutuhkan ${html} ${css}`;
-    // <a href="mailto:asep@mail.com?subject=Test Subject &body=Test pesan">Send mail</a>\
-    // a.href = `mailto:${emailOwner}?subject=${chose}&body=Halo nama saya ${nameUser}, pesan ${message}, call ${phone}`;
     a.click()
 }
