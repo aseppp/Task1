@@ -72,7 +72,7 @@ function renderBlog() {
 function firstPost() {
     return `<div class="blogItem">
     <div class="blogImage">
-        <img src="./assets/image/wallpaperflare.com_wallpaper (4) copy.jpg" alt="image">
+    <img src="./assets/image/Abstract-Nord.png" alt="image">
     </div>
 
     <div class="blogContent">
