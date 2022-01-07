@@ -170,7 +170,12 @@ main {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: #43ff88;
+  border-radius: 2px;
+}
+
+#btn-edit {
+  background-color: #606060;
+  color: white;
 }
 
 ::placeholder {
