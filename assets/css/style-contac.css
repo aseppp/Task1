@@ -28,7 +28,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: white;
-  background-image: url(/assets/image/grains-background.png);
 }
 
 /* NAVBAR */
@@ -77,6 +76,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-image: url(/assets/image/grains-background.png);
 }
 .contacForm {
   margin: auto;
@@ -101,6 +101,7 @@ input {
   border: none;
   outline: none;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 ::placeholder {
@@ -122,6 +123,7 @@ textarea {
   padding: 1rem;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 button {

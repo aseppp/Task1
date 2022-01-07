@@ -82,6 +82,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(/assets/image/grains-background.png);
 }
 
 section.main {

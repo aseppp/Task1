@@ -50,17 +50,19 @@
             <form class="createInput" onsubmit="submitPost(event)">
                 <div class="wrap">
                     <label class="label" for="title">Title</label>
-                    <input type="text" id="input-title">
+                    <input type="text" id="input-title" placeholder="Type your title">
                 </div>
 
                 <div class="wrap">
                     <label class="label" for="content">Content</label>
-                    <textarea name="" id="input-content" cols="30" rows="10"></textarea>
+                    <textarea id="input-content" cols="30" rows="10" placeholder="Type your content"></textarea>
                 </div>
 
                 <div class="wrap">
-                    <label class="label" for="image">Upload Image</label>
-                    <input type="file" name="image" class="input-image" id="input-image">
+                    <label class="label" for="image"> Upload File
+                        <input type="file" name="image" class="input-image" id="input-image" style="margin: 10px 0;">
+                    </label>
+
                 </div>
 
                 <div class="post-button">
