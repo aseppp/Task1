@@ -1,14 +1,17 @@
+// Array untuk menampung post blog
 let blogs = [];
 
+// Function ketika submit post
 function submitPost(event) {
     // Untuk mencegah browser melakukan reload saat melakukan submit
     event.preventDefault()
 
+    // Variable untuk mendapatkan value
     let title = document.getElementById('input-title');
     let content = document.getElementById('input-content');
     let image = document.getElementById('input-image');
 
-    //mendeklarasikan variable untuk mengambil value dan files
+    // Mendeklarasikan variable untuk mengambil value dan files
     title = title.value;
     content = content.value;
     image = image.files;
@@ -16,15 +19,17 @@ function submitPost(event) {
     // Membuat URL pada gambar supaya bisa di akses dan tidak terdapat fake path
     image = URL.createObjectURL(image[0])
 
-
+    // Object untuk mengambil value input
     let objectBlog = {
         title: title,
         content: content,
         image: image,
+
         author: "Asep Saepudin",
         postAt: new Date()
     }
 
+    // Push dilakukan untuk menambahkan data object kedalam array
     blogs.push(objectBlog)
 
 
