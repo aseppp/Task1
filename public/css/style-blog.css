@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1d1d1d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 5px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.navContainer {
+  width: 1136px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navLogo img {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navCta button {
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #43ff88;
+}
+
+.navCta button:hover {
+  transition: ease-out 0.1s;
+  background-color: white;
+}
+
+button a {
+  color: black;
+}
+
+
+/* MAIN STYLE BLOG LIST */
+.container {
+  width: 1000px;
+  margin: 1rem auto;
+}
+
+.ctaAddPost {
+  width: 1000px;
+  margin: 1rem auto;
+  text-align: right;
+}
+button.addPost {
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: #707070;
+}
+
+.blogItem {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.blogImage img {
+  display: flex;
+  width: 300px;
+}
+
+.blogContent {
+  width: 100%;
+  padding: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.buttonGroup button {
+  margin: 5px;
+}
+
+#btn-edit,
+#btn-post {
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+#btn-edit {
+  background-color: #606060;
+  color: white;
+}
+
+::placeholder {
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.detailContent {
+  font-size: 1.7rem;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+
+.desc {
+  font-size: 14px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/style-blog.css">
+
+    <title>Blog | Asep Saepudin</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navContainer">
+            <div class="navLeft">
+                <div class="navLogo">
+                    <img src="image/profile.jpg" alt="profile">
+                </div>
+
+                <div class="navMenu">
+                    <ul>
+                        <li class="navLinks">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="navLinks">
+                            <a href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navCta">
+                <button class="contac"><a href="/contac">Contac Me</a></button>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main">
+        <!-- DYANMIC CONTENT -->
+        {{#if isLogin}}
+        <div class="ctaAddPost">
+            <button class="addPost"><a href="/add-post">Add Post</a></button>
+        </div>
+        {{/if}}
+
+        <section class="contentBlog">
+            <div class="container" id="containerBlog">
+                <div class="blogItem">
+                    <div class="blogImage">
+                        <img src="image/Abstract-Nord.png" alt="image">
+                    </div>
+
+
+                    <div class="blogContent">
+
+                        {{#if isLogin}}
+                        <div class="buttonGroup">
+                            <button id="btn-edit">Edit</button>
+                            <button id="btn-post">Post</button>
+                        </div>
+                        {{/if}}
+
+                        <a href="/blog-detail" class="detailContent" target="_blank" style="color: #43ff88;">Pasar
+                            Coding di
+                            Indonesia Dinilai Masih Menjanjikan</a>
+
+                        <div class="detailDateTime" style="color: grey;">
+                            12 Jul 2021 22:30 WIB | Asep Saepudin
+                        </div>
+
+                        <div class="detailDesc">
+                            <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quae
+                                explicabo officiis modi impedit quaerat omnis consectetur voluptate porro a? Quasi
+                                corporis quo suscipit repudiandae eaque, officiis eius, quas doloribus mollitia
+                                provident laudantium fugit dolores vel assumenda cumque ea facere libero! Voluptatem
+                                aliquid accusantium reprehenderit tempore, voluptates, error tempora quod excepturi
+                                adipisci explicabo quidem voluptate magnam, ex iure nobis incidunt reiciendis sequi
+                                laboriosam sunt quas. Molestiae dolor rerum a quasi.</p>
+                        </div>
+                        <div class="distanceTime" style="text-align: end; color: gray;">
+                            <span>1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/blog.js"></script>
+</body>
+
+</html>
