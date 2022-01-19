@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1d1d1d;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 1rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 5px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.navContainer {
+  width: 1136px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navLogo img {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navCta button {
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #43ff88;
+}
+
+.navCta button:hover {
+  transition: ease-out 0.1s;
+  background-color: white;
+}
+
+button a {
+  color: black;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+.navUser {
+  margin: 0 1rem;
+}
+
+.navUser a {
+  margin: 0 5px;
+}
+
+.navUser a:hover {
+  color: #43ff88;
+}
+
+#navOpen, #closeMenu {
+  display: none;
+}
+
+/* MAIN */
+
+main {
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(/assets/image/grains-background.png);
+}
+.contacForm {
+  margin: auto;
+  width: 350px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.967rem;
+}
+
+label {
+  margin-bottom: 2px;
+  margin-right: 1rem;
+}
+
+input {
+  width: 350px;
+  padding: 12px;
+  background-color: gray;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+select {
+  background-color: gray;
+  padding: 12px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  background-color: gray;
+  border-radius: 7px;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  background-color: #43ff88;
+  color: #303030;
+  font-family: "Poppins", sans-serif;
+}
+
+.boxSkill {
+  margin-bottom: 14px;
+  margin-right: 1rem;
+}
+
+#html,
+#css {
+  width: fit-content;
+  margin: 5px;
+}
+
+@media screen and (max-width: 412px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* NAVBAR */
+  #navOpen, #closeMenu {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 5px;
+    box-shadow: 0px 0px 20px black;
+  }
+
+  .navContainer {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #303030;
+    transition: all ease-out 0.3s;
+  }
+
+  .navMenu.active {
+    left: 0;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    margin: 1rem 10px;
+  }
+}

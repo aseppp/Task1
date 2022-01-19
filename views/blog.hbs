@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="../public/assets/css/style-blog.css">
+
+    <!-- BOX ICON -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    {{!--
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    --}}
+
+    <title>Blog | Asep Saepudin</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navContainer">
+            <div class="navLeft">
+                <div id="navOpen">
+                    <i class='openMenu bx bx-menu-alt-left bx-md' style="margin-right: 5px; color:white;"></i>
+                </div>
+
+                <div class="navLogo">
+                    <img src="../public/assets/image/profile.jpg" alt="profile">
+                </div>
+
+                <div class="navMenu" id="navMenu">
+                    <ul>
+                        <div id="closeMenu">
+                            <i class='closeMenu bx bx-x bx-md'></i>
+                        </div>
+
+                        <li class="navLinks">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="navLinks">
+                            <a href="/blog" style="color: #43ff88;">Blog</a>
+                        </li>
+                        <li class="navLinks">
+                            <a href="/contac">Contac</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navRight">
+                {{#if isLogin}}
+                <ul>
+                    <li class="nav-item">
+                        <span class="nav-link" aria-current="page">Hallo, {{user.name}}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/logout" style="color: red;">Logout</a>
+                    </li>
+                </ul>
+
+                {{else}}
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/login">Login</a>
+                    </li>
+                </ul>
+
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main">
+        {{#if messages.success}}
+        <div class="alert" role="alert">
+            {{messages.success}}
+        </div>
+        {{/if}}
+        <!-- DYANMIC CONTENT -->
+        {{#if isLogin}}
+        <div class="ctaAddPost">
+            <a class="addPost" href="/add-post">Add Post</a>
+        </div>
+        {{/if}}
+
+        <section class="contentBlog">
+            {{#each blogs}}
+            <div class="container" id="containerBlog">
+                <div class="blogItem">
+                    <div class="blogImage">
+                        <img src="../public/assets/image/Abstract-Nord.png" alt="image">
+                    </div>
+
+
+                    <div class="blogContent">
+
+                        {{#if isLogin}}
+                        <div class="buttonGroup">
+                            <a href="/edit-post/{{this.id}}" class="linkEdit">Edit</a>
+                            <a href="/delete-blog/{{this.id}}" class="linkDelete">Delete</a>
+                        </div>
+                        {{/if}}
+
+                        <a href="/blog-detail/{{this.id}}" class="detailContent" target="_blank"
+                            style="color: #43ff88;">{{this.title}}</a>
+
+                        <div class="detailDateTime" style="color: grey;">
+                            {{this.postAt}} | {{this.author}}
+                        </div>
+
+                        <div class="detailDesc">
+                            <p class="desc">{{this.content}}</p>
+                        </div>
+                        <div class="distanceTime" style="text-align: end; color: gray;">
+                            <span>{{this.distance}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </section>
+    </main>
+
+    {{!--
+    <script src="js/blog.js"></script> --}}
+    <script src="../public/assets/js/navbar.js"></script>
+</body>
+
+</html>

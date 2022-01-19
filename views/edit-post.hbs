@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../public/assets/css/style-edit-post.css">
+
+    <title>Edit Post</title>
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navContainer">
+            <div class="navLeft">
+                <div class="navLogo">
+                    <img src="../public/assets/image/profile.jpg" alt="profile">
+                </div>
+
+                <div class="navMenu">
+                    <ul>
+                        <li class="navLinks">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="navLinks">
+                            <a href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navCta">
+                <button class="contac"><a href="/contac">Contac Me</a></button>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main">
+        <!--CREATE POST-->
+        <section class="editPost">
+            <h1 class="headingCreate">Edit Post Here</h1>
+
+            <form class="createInput" method="POST" value="{{id}}">
+                <div class="wrap">
+                    <label class="label" for="title">Title</label>
+                    <input name="updateTitle" value="{{blog.title}}" type="text" id="input-title"
+                        placeholder="Type your title">
+                </div>
+
+                <div class="wrap">
+                    <label class="label" for="content">Content</label>
+                    <textarea name="updateContent" id="input-content" cols="30" rows="10"
+                        placeholder="Type your content">{{blog.content}}</textarea>
+                </div>
+
+                <div class="post-button">
+                    <button>Edit Post</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+
+</html>

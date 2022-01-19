@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #1d1d1d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-color: #1d1d1d !important;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  margin: 0 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none !important;
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 5px;
+  box-shadow: 0px 0px 20px black;
+}
+
+.navContainer {
+  width: 1136px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLeft {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navLinks a {
+  color: white !important;
+}
+
+.navLogo img {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.navCta button {
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #43ff88;
+}
+
+.navCta button:hover {
+  transition: ease-out 0.1s;
+  background-color: white;
+}
+
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+button a {
+  color: black;
+}
+
+
+.editPost {
+  width: 350px;
+  margin: 1.5rem auto;
+}
+
+.headingCreate {
+  font-size: 32px !important;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white !important;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+::placeholder {
+    color: #303030;
+}
+
+textarea {
+  background-color: gray;
+  color: #303030;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+}
+
+.input-image {
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.input-content {
+  padding: 1rem;
+}
+
+.createInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.label {
+  margin: 10px 0;
+  color: white !important;
+}
+
+.post-button button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #43ff88;
+  cursor: pointer;
+}

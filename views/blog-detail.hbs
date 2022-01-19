@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../public/assets/css/detail.css">
+
+    <title>Post | Asep Saepudin</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navContainer">
+            <div class="navLeft">
+                <div class="navLogo">
+                    <img src="../public/assets/image/profile.jpg" alt="profile">
+                </div>
+
+                <div class="navMenu">
+                    <ul>
+                        <li class="navLinks">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="navLinks">
+                            <a href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navCta">
+                <button class="contac"><a href="/contac">Contac Me</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="blog-detail">
+        <div class="blog-detail-container">
+            <h1>{{blog.title}}</h1>
+            <div class="author">{{blog.postAt}} | {{ blog.author }}</div>
+            <img src="../public/assets/image/Abstract-Nord.png" alt="detail" />
+            <p>
+                {{blog.content}}
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
