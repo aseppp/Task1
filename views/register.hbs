@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../public/assets/css/register.css">
 
-    <title>Edit Post</title>
+    <title>Register</title>
 </head>
 
 <body>
@@ -49,15 +49,16 @@
             <form class="createInput" method="POST">
                 <div class="wrap">
                     <label class="label" for="title">Username</label>
-                    <input name="inputUsername" type="text" id="input-title" placeholder="Type your name">
+                    <input name="inputUsername" type="text" id="input-title" placeholder="Type your name" required>
                 </div>
                 <div class="wrap">
                     <label class="label" for="title">Email</label>
-                    <input name="inputEmail" type="text" id="input-title" placeholder="Type your email">
+                    <input name="inputEmail" type="text" id="input-title" placeholder="Type your email" required>
                 </div>
                 <div class="wrap">
                     <label class="label" for="title">Password</label>
-                    <input name="inputPassword" type="password" id="input-title" placeholder="Type your password">
+                    <input name="inputPassword" type="password" id="input-title" placeholder="Type your password"
+                        required>
                 </div>
 
                 {{!-- <div class="wrap">
