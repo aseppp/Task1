@@ -50,6 +50,27 @@
 
 
             <div class="navRight">
+                {{#if isLogin}}
+                <ul>
+                    <li class="nav-item">
+                        <span class="nav-link" aria-current="page">Hallo, {{user.name}}</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/logout" style="color: red;">Logout</a>
+                    </li>
+                </ul>
+
+                {{else}}
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/login">Login</a>
+                    </li>
+                </ul>
+
+                {{/if}}
                 {{!-- <div class="navUser">
                     <a href="/register" class="regis">Register</a>
                     <a href="/login">Login</a>

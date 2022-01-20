@@ -46,7 +46,7 @@
         <section class="editPost">
             <h1 class="headingCreate">Edit Post Here</h1>
 
-            <form class="createInput" method="POST" value="{{id}}">
+            <form class="createInput" method="POST" value="{{id}}" enctype="multipart/form-data">
                 <div class="wrap">
                     <label class="label" for="title">Title</label>
                     <input name="updateTitle" value="{{blog.title}}" type="text" id="input-title"
@@ -57,6 +57,14 @@
                     <label class="label" for="content">Content</label>
                     <textarea name="updateContent" id="input-content" cols="30" rows="10"
                         placeholder="Type your content">{{blog.content}}</textarea>
+                </div>
+
+                <div class="wrap">
+                    <label class="label" for="image"> Upload File
+                        <input type="file" name="inputImage" class="input-image" id="input-image"
+                            style="margin: 10px 0;">
+                    </label>
+
                 </div>
 
                 <div class="post-button">

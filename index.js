@@ -10,6 +10,7 @@ app.set('view engine', 'hbs')
 
 // Static File
 app.use('/public', express.static(__dirname + '/public'))
+app.use('/uploads', express.static(__dirname + '/uploads'))
 
 app.use(express.urlencoded({extended: false}))
 
@@ -20,6 +21,9 @@ const database = require('./connection/database')
 const encrypt = require("bcrypt")
 const session = require('express-session')
 const flash = require('express-flash')
+
+// Import Multer
+const multer = require('./middleware/upload')
 
 // Use flash for alert
 app.use(flash())
@@ -53,7 +57,7 @@ app.get('/', (request, response) => {
                     year: list.year
                 }
             })
-            response.render('index', {experience: tbExp})
+            response.render('index', {experience: tbExp, isLogin : request.session.isLogin, user: request.session.user})
         })
 
 
@@ -141,8 +145,11 @@ app.get('/logout', function(request, response){
 
 // Routing Blog
 app.get('/blog', (request, response) => {
+    const query = `SELECT tb_blog.id, title, tb_blog.content, tb_blog.image, tb_blog.post_at, tb_user.name AS author, tb_blog.author_id
+    FROM tb_blog LEFT JOIN tb_user ON tb_blog.author_id = tb_user.id`
+
     database.connect((err, client, done) => {
-        client.query('SELECT * from tb_blog', (err, result) => {
+        client.query(query, (err, result) => {
             if (err) throw err
 
             let dataBlog = result.rows
@@ -150,13 +157,12 @@ app.get('/blog', (request, response) => {
                 return {
                     ...data,
                     isLogin: request.session.isLogin,
-                    author: data.authorId,
-                    postAt: getTime(data.postAt),
-                    distance: getDistanceTime(data.postAt)
+                    postAt: getTime(data.post_at),
+                    distance: getDistanceTime(data.post_at)
                 }
             })
             // console.log(newData);
-            response.render('blog', {isLogin : request.session.isLogin, blogs: newData, user: request.session.user})
+            response.render('blog', {isLogin : request.session.isLogin, user: request.session.user, blogs: newData,})
         })
     })
 })
@@ -185,20 +191,24 @@ app.get('/add-post', (request,response) => {
 })
 
 // Routing Post Add Post
-app.post('/blog', (request, response) => {
+app.post('/blog', multer.single('inputImage'),(request, response) => {
     let data = request.body
+
+    let image = request.file.filename
+    let authorId = request.session.user.id
 
     database.connect((err, client) => {
         if (err) throw err
-        let query = `INSERT INTO tb_blog(title, content, image) VALUES ('${data.inputTitle}','${data.inputContent}','image.png')`
+        let query = `INSERT INTO tb_blog(title, content, image, author_id) VALUES ('${data.inputTitle}','${data.inputContent}','${image}', '${authorId}')`
+
         client.query(query, (err, result) => {
             if (err) throw err
 
             response.redirect('/blog')
         });
     })
-
 })
+
 
 // Routing Delete Blog Post
 app.get('/delete-blog/:id', function(request, response) {
@@ -231,11 +241,12 @@ app.get('/edit-post/:id', (request, response) => {
 })
 
 // Routing Post Edit Post
-app.post('/edit-post/:id', (request, response) => {
+app.post('/edit-post/:id', multer.single('inputImage'), (request, response) => {
     let id = request.params.id
 
     let data = request.body
-    let query = `UPDATE tb_blog SET title='${data.updateTitle}', content='${data.updateContent}', image='image.png' WHERE id =${id}`
+    let image = request.file.filename
+    let query = `UPDATE tb_blog SET title='${data.updateTitle}', content='${data.updateContent}', image='${image}' WHERE id =${id}`
 
     database.connect((error, client) => {
         client.query(query, (error, result) => {

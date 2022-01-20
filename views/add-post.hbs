@@ -43,7 +43,7 @@
     <section class="createPost">
         <h1 class="headingCreate">Create Post Here</h1>
 
-        <form class="createInput" method="POST" action="/blog">
+        <form class="createInput" method="POST" action="/blog" enctype="multipart/form-data">
             <div class="wrap">
                 <label class="label" for="title">Title</label>
                 <input name="inputTitle" type="text" id="input-title" placeholder="Type your title">
@@ -57,7 +57,7 @@
 
             <div class="wrap">
                 <label class="label" for="image"> Upload File
-                    <input type="file" name="image" class="input-image" id="input-image" style="margin: 10px 0;">
+                    <input type="file" name="inputImage" class="input-image" id="input-image" style="margin: 10px 0;">
                 </label>
 
             </div>

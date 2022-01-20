@@ -223,6 +223,10 @@ i:hover {
     flex-direction: column;
   }
 
+  .navRight ul {
+    flex-direction: row;
+  }
+
   li {
     margin: 1rem 10px;
   }
